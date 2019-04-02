@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import heatMovImg from './heatImg.jpg';
 
 class App extends Component {
   render() {
@@ -8,8 +9,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
+          <img src={heatMovImg} className="movie" alt=""></img>
+          <p>=43
+            <h1> Yo! Check out my first website/app project!</h1>
           </p>
           <a
             className="App-link"
