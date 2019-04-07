@@ -24,25 +24,49 @@
 }
 
 
+
 .container {
   display: flex;
+  height: 100%;
+  width: 100%;
 }
 
-.item {
-  flex: 1;
-}
 
-.movie-title {
+
+
+/*.movie-title {
   margin: 30px;
   vertical-align: middle;
   font-size: 60px;
 }
+*/
 
-.movie-cover {
-  margin:30 px;
-  width: 33.3%;
-
+.movie-img-cover {
+  flex: 1;
+  margin: 20px;
+  flex-basis: 100%;
+  position: relative;
+  overflow: hidden;
 }
+
+.overlay {
+/*display: none; 
+bottom: 0*/
+font-size: 20px;
+transition: bottom 1s ease;
+bottom: -100%;
+position: absolute;
+left: 0;
+width: 100%;
+background-color: black;
+opacity: .5;
+}
+
+.movie-img-cover:hover .overlay {
+/*  display: block; */
+  bottom: 0;
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -51,4 +75,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: block;
+    margin: 0px;
+    }
 }
