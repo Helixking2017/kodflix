@@ -1,30 +1,27 @@
 import React from 'react';
-import MovieItem from './MovieItem'
-import BerserkImg from './Images/Berserk.jpg';
-import CodeGeassImg from './Images/Code Geass.jpg';
-import FullMetalAlchemistImg from './Images/Fullmetal Alchemist Brotherhood.jpg';
-import SamuraiChamplooImg from './Images/SamuraiChamploo.jpg';
-import TrigunImg from './Images/Trigun.jpg';
-import CowboyBebopImg from './Images/Cowboy Bebop.jpg';
+import MovieItem from './MovieItem';
+import Galleryget from './Gallery-get';
 
 
 
-export default function Gallery(props) {
+export default function Gallery() {
   return (
 
     <div>
       <div className="container">
-        <MovieItem name="Berserk" movieImage={BerserkImg}></MovieItem>
-        <MovieItem name="Code Geass" movieImage={CodeGeassImg}></MovieItem>
-        <MovieItem name="Full Metal Alchemist: Brotherhood" movieImage={FullMetalAlchemistImg}></MovieItem>
+      {
+        Galleryget().map(element => (
+          <MovieItem 
+          key={element.key}
+          id={element.id}
+          name={element.name}
+          movieImage={element.movieImage}
+          />
+        
+        ))
+      }
       </div>
-      <div className="container">
-        <MovieItem name="Samurai Champloo" movieImage={SamuraiChamplooImg}></MovieItem>
-        <MovieItem name="Trigun" movieImage={TrigunImg}></MovieItem>
-        <MovieItem name="Cowboy Bebop" movieImage={CowboyBebopImg}></MovieItem>
-      </div>
-
-
     </div>
-  )
+  );
 }
+
