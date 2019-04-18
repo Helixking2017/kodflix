@@ -7,13 +7,17 @@ import './App.css';
 
 import Gallery from './Gallery';
 
+
 class App extends Component {
+
+  
+
   render() {
     return (
       <Router>
         <div className="App">
           <Route exact path ='/' component = {Gallery}/>
-          <Route exact path='/Details' component = {Details}/>         
+          <Route exact path='/:Details' component = {Details}/>         
         </div>
       </Router>
       
